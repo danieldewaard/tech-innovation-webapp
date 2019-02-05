@@ -1,32 +1,30 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router';
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router";
 
-
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField';
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import RaisedButton from "material-ui/RaisedButton";
+import TextField from "material-ui/TextField";
 
 // Form from the package 'informed'
 import { Form, Text } from "informed";
 
 class ComponentDemo extends Component {
-
   constructor(props) {
-    super(props)
-    this.state = ({
+    super(props);
+    this.state = {
       redirect: false
-    });
+    };
   }
 
   handleClick = () => {
     this.setState({
       redirect: true
-    })
-  }
+    });
+  };
   render() {
     if (this.state.redirect) {
-      return <Redirect push to="/" />;
+      return <Redirect push to="/locations" />;
     }
     return (
       <div>
@@ -49,19 +47,15 @@ class ComponentDemo extends Component {
               onChange={(event, newValue) => {
                 // setPassword(newValue);
               }}
-              onKeyPress={(event) => {
-                if (event.key === 'Enter') {
+              onKeyPress={event => {
+                if (event.key === "Enter") {
                   this.handleClick();
                 }
               }}
             />
             <br />
             <Link to="/">
-              <RaisedButton
-                label="Login"
-                primary={true}
-                style={style}
-              />
+              <RaisedButton label="Login" primary={true} style={style} />
             </Link>
           </div>
         </MuiThemeProvider>
@@ -72,7 +66,7 @@ class ComponentDemo extends Component {
 }
 
 const style = {
-  margin: 15,
+  margin: 15
 };
 
 export default ComponentDemo;

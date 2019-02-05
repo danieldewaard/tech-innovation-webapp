@@ -6,7 +6,7 @@ class AtOffice extends Component {
     return (
       <div>
         <center>
-          <h1> in Office </h1>
+          <h1> In Office </h1>
           <br />
           <p1> select the area you are sitting in?</p1>
           <br />

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import Button from "../Components/Button/button";
 import Text from "../Components/Text/text";
@@ -29,13 +30,12 @@ class Login extends Component {
     });
     console.log(this.state.data);
   }
-
   render() {
     return (
       <div>
         <h1> Login </h1>
         <Text onClick={this.toggleData} />
-        <Button label="login" onClick={this.toggleData} />
+        <Button label="login" href="/" onClick={this.toggleData} />
         <Doughnut data={data} />
       </div>
     );

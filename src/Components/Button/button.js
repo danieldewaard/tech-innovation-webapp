@@ -1,13 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
-const myButton = props => {
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit
+  },
+  input: {
+    display: "none"
+  }
+});
+
+function ContainedButtons(props) {
+  const { classes } = props;
   return (
-    <span>
-      <Button color="primary">{props.label}</Button>
-    </span>
+    <div>
+      <Button
+        href={props.href}
+        variant="text"
+        className={classes.button}
+        label={props.label}
+      >
+        {props.label}
+      </Button>
+    </div>
   );
+}
+
+ContainedButtons.propTypes = {
+  classes: PropTypes.object.isRequired
 };
 
-export default myButton;
+export default withStyles(styles)(ContainedButtons);
