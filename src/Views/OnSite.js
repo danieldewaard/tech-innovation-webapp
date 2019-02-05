@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "../Components/Button/button";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Typography from "@material-ui/core/Typography";
+import { NavLink } from "react-router-dom";
 
 const whitecolour = {
   color: "#FDFFFE"
@@ -33,7 +34,9 @@ class OnSite extends Component {
           <br />
           <input id="my-time" placeholder="Time (hh:mm)" />
           <br />
-          <Button label="Confirm" onClick={this.toggleData} />
+          <NavLink to="/home" style={{ textDecoration: "none" }}>
+            <Button label="Confirm" onClick={this.toggleData} />
+          </NavLink>
         </center>
       </div>
     );

@@ -14,6 +14,7 @@ import InOffice from "./Views/InOffice";
 import OnSite from "./Views/OnSite";
 import Options from "./Views/Options";
 import DataVis from "./Views/DataVis";
+import TeamLocations from "./Views/TeamLocations";
 import ComponentDemo from "./Views/ComponentDemo";
 
 import "./styles.css";
@@ -61,10 +62,12 @@ class App extends Component {
           <Route path="/DataVis" component={DataVis} />
           <Route path="/component-demo" component={ComponentDemo} />
           <Route exact path="/" component={Home} />
+          <Route path="/home" component={Home} />
           <Route path="/locations" component={Locations} />
           <Route path="/inoffice" component={InOffice} />
           <Route path="/onsite" component={OnSite} />
           <Route path="/options" component={Options} />
+          <Route path="/TeamLocations" component={TeamLocations} />
         </Switch>
       </div>
     );

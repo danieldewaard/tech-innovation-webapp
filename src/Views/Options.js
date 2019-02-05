@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { NavLink } from "react-router-dom";
 import Checkbox from "../Components/Check/check";
 import CheckD from "../Components/Check/checkDate";
 import Dropdown from "../Components/Dropdown/dropdown";
@@ -54,7 +54,9 @@ class Options extends Component {
           <Checkbox label="Allow reminders?" />
         </p>
         <p align="right" style={{ marginRight: "50px" }}>
-          <Button label="Save Options" />
+          <NavLink to="/home" style={{ textDecoration: "none" }}>
+            <Button label="Save Options" onClick={this.toggleData} />
+          </NavLink>
         </p>
       </div>
     );
