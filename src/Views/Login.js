@@ -35,7 +35,7 @@ class Login extends Component {
       <div>
         <h1> Login </h1>
         <Text onClick={this.toggleData} />
-        <Button label="login" onClick={this.toggleData} />
+        <Button label="login" onClick={this.toggleData} href="/" />
         <Doughnut data={data} />
       </div>
     );

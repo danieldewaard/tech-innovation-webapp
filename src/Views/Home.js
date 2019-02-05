@@ -14,9 +14,13 @@ class Home extends Component {
           <br />
           <br />
           <br />
-          <Button label="Log location" onClick={this.toggleData} />
-          <Button label="Find Team" onClick={this.toggleData} />
-          <Button label="Options" onClick={this.toggleData} />
+          <Button
+            label="Log location"
+            onClick={this.toggleData}
+            href="/locations"
+          />
+          <Button label="Find Team" onClick={this.toggleData} href="/find" />
+          <Button label="Options" onClick={this.toggleData} href="/options" />
         </center>
       </div>
     );

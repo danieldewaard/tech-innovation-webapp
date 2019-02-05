@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const styles = theme => ({
   margin: {
@@ -52,6 +53,8 @@ function CustomizedButtons(props) {
       <Button
         variant="contained"
         color="primary"
+        href={props.href}
+        className={classes.button}
         disableRipple
         style={{
           minWidth: 200,

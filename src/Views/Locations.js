@@ -11,9 +11,13 @@ class Locations extends Component {
           <br />
           <br />
           <br />
-          <Button label="at office" onClick={this.toggleData} />
-          <Button label="from home" onClick={this.toggleData} />
-          <Button label="On Site" onClick={this.toggleData} />
+          <Button
+            label="In Office"
+            onClick={this.toggleData}
+            href="/inoffice"
+          />
+          <Button label="From Home" onClick={this.toggleData} />
+          <Button label="On Site" onClick={this.toggleData} href="/onsite" />
         </center>
       </div>
     );
