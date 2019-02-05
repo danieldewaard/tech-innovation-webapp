@@ -1,12 +1,33 @@
 import React, { Component } from "react";
 import Button from "../Components/Button/button";
+import myImage from "../Assets/Pictures/Pacific-RGB.png";
+import Typography from "@material-ui/core/Typography";
+
+const whitecolour = {
+  color: "#FDFFFE"
+};
 
 class OnSite extends Component {
   render() {
     return (
-      <div>
+      <div
+        style={{
+          backgroundImage: "url(" + myImage + ")",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          height: 700
+        }}
+      >
         <center>
-          <h1> On Site </h1>
+          <Typography
+            component="h2"
+            variant="h3"
+            gutterBottom
+            style={whitecolour}
+          >
+            Working on site?
+          </Typography>
           <p1> How long will you be onsite until </p1>
           <br />
           <br />
