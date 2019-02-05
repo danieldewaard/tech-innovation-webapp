@@ -10,6 +10,10 @@ import Typography from "@material-ui/core/Typography";
 const whitecolour = {
   color: "#FDFFFE"
 };
+const divStyle = {
+  display: "flex",
+  alignItems: "center"
+};
 
 class Options extends Component {
   render() {
@@ -20,7 +24,7 @@ class Options extends Component {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: 800
+          height: 700
         }}
       >
         <center>
@@ -39,25 +43,29 @@ class Options extends Component {
           <CheckD />
           <Dropdown />
         </center>
-        <p style={{ marginLeft: "60px" }}>Set default location:</p>
-        <p style={{ marginLeft: "0px" }}>
-          <center>
-            State <Dropdown />
-            Building
-            <Dropdown />
-            Floor
-            <Dropdown />
-          </center>
-        </p>
-        <p style={{ marginLeft: "20px" }}>
+        <center>
+          <p style={{ marginLeft: "0px" }}>Set default location:</p>
+          <p style={{ marginLeft: "470px" }}>
+            <div style={divStyle}>
+              State <Dropdown />
+              Building
+              <Dropdown />
+              Floor
+              <Dropdown />
+            </div>
+          </p>
+        </center>
+        <p style={{ marginLeft: "450px" }}>
           <Checkbox label="Show me as busy" />
           <Checkbox label="Allow reminders?" />
         </p>
-        <p align="right" style={{ marginRight: "50px" }}>
-          <NavLink to="/home" style={{ textDecoration: "none" }}>
-            <Button label="Save Options" onClick={this.toggleData} />
-          </NavLink>
-        </p>
+        <center>
+          <p /*align="right" style={{ marginRight: "0px" }}*/>
+            <NavLink to="/home" style={{ textDecoration: "none" }}>
+              <Button label="Save Options" onClick={this.toggleData} />
+            </NavLink>
+          </p>
+        </center>
       </div>
     );
   }
